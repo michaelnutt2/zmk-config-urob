@@ -214,8 +214,8 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
                     X_LH                                               &smart_shft   &lt FN RET      X_MH     &lt_spc NAV 0 SMART_NUM                                                 X_RH
                 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
             >;
-        }
-    }
+        };
+    };
     
 };
 
