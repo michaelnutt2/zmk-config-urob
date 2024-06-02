@@ -16,6 +16,8 @@
 #define SYS     4
 #define MOUSE   5
 
+#define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
+
 #include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
 #include "extra_keys.h"
@@ -187,7 +189,6 @@ ZMK_TAP_DANCE(copy_cut,
 )
 
 // misc aliases
-#define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define HYPER       &kp LG(LS(LC(LALT)))
 #define DSK_NEXT    &kp LG(LC(UP))
 #define DSK_PREV    &kp LG(LC(DOWN))
