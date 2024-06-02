@@ -16,8 +16,6 @@
 #define SYS     4
 #define MOUSE   5
 
-#define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-
 #include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
 #include "extra_keys.h"
@@ -190,6 +188,7 @@ ZMK_TAP_DANCE(copy_cut,
 
 // misc aliases
 #define HYPER       &kp LG(LS(LC(LALT)))
+#define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define DSK_NEXT    &kp LG(LC(UP))
 #define DSK_PREV    &kp LG(LC(DOWN))
 #define DSK_MGR     &kp LG(D)
@@ -307,13 +306,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
             label = "MOUSE";
             bindings = <
                 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                    ___           &kp F1        &kp F2        &kp F3        &kp F4        ___             DSK_NEXT      U_WH_L        U_WH_D        U_WH_U        U_WH_R        ___
+                    ___           ___           ___           ___           ___           ___             DSK_NEXT      U_WH_L        U_WH_D        U_WH_U        U_WH_R        ___
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    ___           &kp F5        &kp F6        &kp F7        &kp F8        ___             DSK_MGR       U_MS_L        U_MS_D        U_MS_U        U_MS_R        ___
+                    ___           ___           ___           ___           ___           ___             DSK_MGR       U_MS_L        U_MS_D        U_MS_U        U_MS_R        ___
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    ___           &kp F9        &kp F10       &kp F11       &kp F12       ___             DSK_PREV      &mkp MB4      &mkp MCLK      &mkp MB5     ___           ___
+                    ___           ___           ___           ___           ___           ___             DSK_PREV      &mkp MB4      &mkp MCLK      &mkp MB5     ___           ___
                 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                              ___           ___           ___             &mkp LCLK     &mkp RCLK     CANCEL
+                                                              ___           ___           ___             &mkp LCLK     &mkp RCLK     &kp F5
                 //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯                                           
 
             >;
