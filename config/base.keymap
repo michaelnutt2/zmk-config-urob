@@ -123,11 +123,11 @@ ZMK_TAP_DANCE(num_dance,
 };
 
 // smart-mouse, requires PR #1366
-ZMK_TRI_STATE(smart_mouse,
-    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RH0 RH1 RH2>;
-    ignored-layers = <MOUSE>;
-)
+//ZMK_TRI_STATE(smart_mouse,
+//  bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+//  ignored-key-positions = <RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RH0 RH1 RH2>;
+//  ignored-layers = <MOUSE>;
+//)
 
 // Alt+Tab swapper, requires PR #1366
 ZMK_TRI_STATE(swapper,
@@ -211,7 +211,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     XXX           &kp SEMI      &kp Q         &kp J         &kp K         &kp X           &kp B         &kp M         &kp W         &kp V         &kp Z         CANCEL
                 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                              HYPER         &smart_shft   &lt FN RET      &lt_spc NAV 0 SMART_NUM     &smart_mouse                                           
+                                                              HYPER         &smart_shft   &lt FN RET      &lt_spc NAV 0 SMART_NUM     &tog MOUSE                                          
                 //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯                                           
             >;
         };
@@ -306,13 +306,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
             label = "MOUSE";
             bindings = <
                 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                    ___           ___           ___           ___           ___           ___             DSK_NEXT      U_WH_L        U_WH_D        U_WH_U        U_WH_R        ___
+                    ___           &kp F1        &kp F2        &kp F3        &kp F4        ___             DSK_NEXT      U_WH_L        U_WH_D        U_WH_U        U_WH_R        ___
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    ___           ___           ___           ___           ___           ___             DSK_MGR       U_MS_L        U_MS_D        U_MS_U        U_MS_R        ___
+                    ___           &kp F5        &kp F6        &kp F7        &kp F8        &tog DEF        DSK_MGR       U_MS_L        U_MS_D        U_MS_U        U_MS_R        ___
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    ___           ___           ___           ___           ___           ___             DSK_PREV      &mkp MB4      &mkp MCLK      &mkp MB5     ___           ___
+                    ___           &kp F9        &kp F10       &kp F11       &kp F12       ___             DSK_PREV      &mkp MB4      &mkp MCLK      &mkp MB5     ___           ___
                 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                              ___           ___           ___             &mkp LCLK     &mkp RCLK     &kp F5
+                                                              ___           ___           ___             &mkp LCLK     &mkp RCLK     ___
                 //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯                                           
 
             >;
