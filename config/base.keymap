@@ -193,19 +193,6 @@ ZMK_TAP_DANCE(copy_cut,
 #define DSK_PREV    &kp LG(LC(DOWN))
 #define DSK_MGR     &kp LG(D)
 #define VOL_DOWN    &kp C_VOL_DN
-#define FILES       &kp C_AL_FILES
-#define BROW        &kp C_AL_WWW
-#define DOCS        &kp C_AL_DOCS
-#define SET         &kp C_AL_CONTROL_PANEL
-#define CONF        &kp C_AL_CCC
-#define FORWARD     &kp K_FORWARD
-#define BACK        &kp K_BACK
-#define BOOK        &kp C_AC_BOOKMARKS
-#define NEW         &kp C_AC_NEW
-#define SAVE        &kp C_AC_SAVE
-#define CLOSE       &kp C_AC_CLOSE
-#define EXIT        &kp C_AC_EXIT
-
 
 /* Keymap */
 
@@ -239,11 +226,11 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
             label = "NAV";
             bindings = <
                 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                    ___           ___           ___           &kp LS(TAB)   &swapper      FILES           DSK_NEXT      U_WH_L        U_WH_D        U_WH_U        U_WH_R        ___
+                    ___          &kp C_AL_FILES &kp C_AL_WWW  &kp LS(TAB)   &swapper      &kp C_AL_FILES  DSK_NEXT      U_WH_L        U_WH_D        U_WH_U        U_WH_R        ___
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    ___           ___           SET           BACK          FORWARD       NEW             DSK_MGR       NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT     ___
+                    ___           ___  &kp C_AC_CONTROL_PANEL &kp K_BACK   &kp K_FORWARD  &kp C_AC_NEW    DSK_MGR       NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT     ___
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    ___           ___           EXIT          CLOSE         SAVE          BOOK            DSK_PREV      &kp TAB       &kp LT        &kp GT        ___           ___
+                    ___           ___        &kp C_AC_EXIT &kp C_AC_CLOSE &kp C_AC_SAVE &kp C_AC_BOOKMARKS DSK_PREV      &kp TAB       &kp LT        &kp GT        ___           ___
                 //╰─────────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                               ___           ___           ___             ___           CANCEL        ___
                 //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯                                           
