@@ -324,6 +324,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
             >;
         };
     };  
+};
 /{ \
     keymap { \
         compatible = "zmk,keymap"; \
